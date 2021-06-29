@@ -1,0 +1,32 @@
+/*Consulta 1. 
+Consultar al sistema si X libro se encuentra disponible (y que se conozcan sus versiones físicas y digitales)*/
+select libro.titulo_libro, version.descripcion
+from libro
+inner join version on libro.id_version=version.id_version
+where  libro.titulo_libro='Callada como la muerte'
+
+/*Consulta 2. 
+Consultar la cantidad de veces que un usuario o socio ha prestado un libro y lo ha entregado en la fecha establecida o se ha demorado mas días (Por cada cliente)*/
+select cliente.nombre_cliente, cliente.apellido_cliente,prestar_libro.feha_entrega_estimada,prestar_libro.fecha_entrega_real, 
+count(prestar_libro.id_prestamo) as total
+from cliente
+inner join prestar_libro on prestar_libro.id_cliente=cliente.id_cliente
+where cliente.id_cliente=1 and prestar_libro.feha_entrega_estimada<>prestar_libro.fecha_entrega_real
+group by cliente.nombre_cliente, cliente.apellido_cliente,prestar_libro.feha_entrega_estimada,prestar_libro.fecha_entrega_real
+
+/* Consulta3. 
+Consultar los proveedores y la cantidad de libros que se le han adquirido junto con el año en el que se hizo la adquisición.*/
+select extract(year from dia_compra), cant_libros_q_provee, libro.TITULO_LIBRO  from proveedores
+inner join comprar_libro_a_proveedor on comprar_libro_a_proveedor.id_proveedores=proveedores.id_proveedores
+inner join libro on comprar_libro_a_proveedor.id_libro=libro.id_libro
+
+/*Consulta 4
+Consultar cuantos libros por año no han sido devueltos o recuperados.*/
+select prestar_libro.fecha_entrega_real ,prestar_libro.feha_entrega_estimada, libro.titulo_libro,
+cliente.nombre_cliente,cliente.apellido_cliente,
+count(prestar_libro.feha_entrega_estimada)
+from cliente
+inner join prestar_libro on prestar_libro.id_cliente=cliente.id_cliente
+inner join libro on libro.id_libro=prestar_libro.id_libro
+where prestar_libro.fecha_entrega_real is  null
+group by prestar_libro.fecha_entrega_real ,libro.titulo_libro,cliente.nombre_cliente,cliente.apellido_cliente,prestar_libro.feha_entrega_estimada

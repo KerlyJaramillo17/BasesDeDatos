@@ -1,0 +1,62 @@
+insert into CLIENTE values (001, 1316818945, 'Robert', 'Moreira', 099991234, 'Ecuatoriana', 'San Pedro', 'Uleam', 052578334);
+insert into CLIENTE values (002, 1316818946, 'Alan', 'Cardenas', 0939123458, 'Ecuatoriana', 'San Agustin', 'Uleam', 052578334);
+insert into CLIENTE values (003, 1316818947, 'Alexy', 'Anchundia', 099991245, 'Ecuatoriana', 'Los Bajos', 'Uleam', 052578334);
+insert into CLIENTE values (004, 1316818948, 'Elizabeth', 'Jaramillo', 099991267, 'Ecuatoriana', 'Leonidas Proaño', 'Uleam', 052578334);
+insert into CLIENTE values (005, 1316818949, 'Stefanny', 'Zambrano', 099991299, 'Ecuatoriana', 'Manta', 'Uleam', 052578334);
+
+
+
+insert into COMPRAR_LIBRO_A_PROVEEDOR VALUES (001,002,001,001,'21/6/2021',10,10,0);
+insert into COMPRAR_LIBRO_A_PROVEEDOR VALUES (002,001,002,002,'21/6/2021',20,9.30,0);
+insert into COMPRAR_LIBRO_A_PROVEEDOR VALUES (003,003,003,003,'21/6/2021',30,30,0);
+insert into COMPRAR_LIBRO_A_PROVEEDOR VALUES (004,004,004,004,'21/6/2021',40,7.50,0);
+
+insert into EDITORIAL values(001, 'Salamandra');
+insert into EDITORIAL values(002, 'El conejo');
+insert into EDITORIAL values(003, 'Dinalibros');
+insert into EDITORIAL values(004, 'Diamante');
+
+
+
+insert into EMPLEADO values (001,'Geovanny', 'Bazurto', 1316818941, 'geovanny@gmail.com');
+insert into EMPLEADO values (002,'Erick', 'Moreira', 1316814456, 'erickm17@gmail.com');
+insert into EMPLEADO values (003,'Pierina', 'Morira', 1316813345, 'pierinam@gmail.com');
+insert into EMPLEADO values (004,'Kennia', 'Intriago', 1316655677, 'kennia1997@gmail.com');
+insert into EMPLEADO values (005,'Rosa', 'Zamora', 1416784563, 'rosazamora@gmail.com');
+
+insert into GENERO values (001, 'Literario');
+insert into GENERO values (002, 'Cientifico');
+insert into GENERO values (003, 'Informatico');
+insert into GENERO values (004, 'Suspenso');
+insert into GENERO values (005, 'Misterio');
+
+
+insert into LIBRO values (001, 001, 005, 001,'H. P. La camara de los secretos','Jk Rowling', '02/07/1998','Uno',978080728, 15.00,20);
+insert into LIBRO values (002, 002, 004, 001,'Callada como la muerte','Alicia Ortega', '17/10/2012','Uno',978997887, 12,30);
+insert into LIBRO values (003, 003, 003, 001,'Enciclopedia C++','Javier Ceballos', '17/04/2009','Uno',978847897, 57,40);
+insert into LIBRO values (004, 004, 002, 001,'La amenaza mas letal','Michael Osterholm', '01/05/2020','Uno',978958429, 10,50);
+insert into LIBRO values (005, 001, 005, 002,'Harry Potter La camara de los secretos','Jk Rowling', '02/07/1998','Uno',978080728, 15,20);
+insert into LIBRO values (006, 002, 004, 002,'Callada como la muerte','Alicia Ortega', '17/10/2012','Uno',978997887, 12,30);
+insert into LIBRO values (007, 003, 003, 002,'Enciclopedia C++','Javier Ceballos', '17/04/2009','Uno',978847897, 57,40);
+insert into LIBRO values (008, 004, 002, 002,'La amenaza mas letal','Michael Osterholm', '01/05/2020','Uno',978958429, 10,50);
+
+insert into PRESTAR_LIBRO values(001, 004, 002, '10/02/2021', '10/03/2021','10/03/2021');
+insert into PRESTAR_LIBRO values(002, 003, 001, '05/01/2020', '4/02/2020','10/02/2020');
+insert into PRESTAR_LIBRO values(003, 002, 004, '29/12/2020', '10/01/2021','10/02/2021');
+insert into PRESTAR_LIBRO values(004, 001, 003, '15/11/2020', '10/12/2020',null);
+insert into PRESTAR_LIBRO values(005, 004, 002, '10/02/2021', '10/03/2021','10/03/2021');
+insert into PRESTAR_LIBRO values(006, 003, 001, '05/02/2021', '05/03/2021','05/03/2021');
+insert into PRESTAR_LIBRO values(007, 002, 004, '29/12/2020', '10/01/2021','10/02/2021');
+insert into PRESTAR_LIBRO values(008, 001, 001, '15/11/2020', '10/12/2020',null);
+
+
+
+insert into PROVEEDORES values (001, 1311516287, 'JUANO','CEVALLOS','ADMETHODS ECUADOR CIA- LTDA', 50);
+insert into PROVEEDORES values (002, 1311516287, 'Alberto','Velez','BOOKS & BITS ECUADOR S.A', 80);
+insert into PROVEEDORES values (003, 1311516287, 'Elizabeth','ZAMORA','EDICIONES POPULUS', 100);
+insert into PROVEEDORES values (004, 1311516287, 'FLOR','SANTANA','EUROLIBROS S.A', 150);
+
+
+insert into VERSION values(001,'FISICA' );
+insert into VERSION values(002,'DIGITAL' );
+
